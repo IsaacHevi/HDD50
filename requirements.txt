@@ -1,0 +1,11 @@
+os
+flask
+cs50
+csv
+sqlite
+numpy as np
+matplotlib
+pandas
+sklearn
+seaborn
+warnings

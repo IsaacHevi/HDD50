@@ -1,0 +1,14 @@
+# HDD50
+Video Demo: https://youtu.be/DfkLDhmbsZs
+## Description: 
+HDD50 is a web application that uses some vital information obtained about a person to predict the chances of he/she having a heart disease. Before getting into the web application's functionality, the paragraph below illustrates the purposes of the files and directory in the project directory.
+The templates in the directory that contains the html files of the web application. In this directory are layout.html, index.html and report.html. layout.html is the base html page that is extended to the other html pages using jinja syntax. It contains the html elements that will be used by all the html pages in the web application. Also it contains the CSS of the web application. I decided to add the styling of the web application to the html because it is very little and needed not a whole directory or file for it. index.html is the homepage of the web application. It is the page that contains the form that takes the information about the user to predict the heart disease status of the user. report.html is the page that displays to the user the prediction made by the algorithm. app.py is the python file that links everything in the web application together. It uses the flask library to connect to the html and uses the pandas library to connect to the logistic regression algorithm. data.db is the SQL database that takes the information from the user and feeds it to the machine learning algorithm for testing. Heart_Disease_Predicton.csv is the dataset I used to train the logistic regression algorithm. requirements.txt is the text file that contains all the libraries I needed for the project. 
+### Machine Learning Algorithm
+Logistic regression is a binary classification algorithm used to predict the probability of an input belonging to one of two classes (e.g., 0 or 1, True or False).
+In summary, logistic regression estimates the probability that an input belongs to a particular class and uses a threshold to make a binary classification decision based on that probability. It is a simple yet effective algorithm for binary classification tasks.
+## How it Works
+In this paragraph, I describe how this web application works. When the homepage of the application loads, it provides the user with a form that takes information necessary for the prediction of the heart disease status. This form contains the following input fields:
+Age, Sex, Chest pain type, BP, Cholesterol, FBS over 120, EKG results, Max HR, Exercise angina, ST depression, Slope of ST, Number of vessels fluro, Thallium. After gathering the information, the application then uses the post method to submit the form to the app.py file. This file loads the information to the data.db file using SQLite. The information is then loaded to the vitals.csv file which is then converted to a pandas DataFrame for testing. After testing, the result is then displayed to the user in the report.html file.
+
+
+

@@ -1,0 +1,57 @@
+{% extends "layout.html" %}
+
+
+{% block main %}
+    <div id="whole_form">
+        <form action="/" method="post" id="form">
+            <div class="row">
+                <input name="age" type="number" placeholder="Age" autocomplete="off" class="property" min="0">
+                <select name="sex" id="sex" class="property">
+                    <option value="#" disabled selected>Gender</option>
+                    <option value="0">Male</option>
+                    <option value="1">Female</option>
+                    <option value="2">Rather Not Say</option>
+                </select>
+                <select name="chest_pain_type" id="chest_pain_type" class="property">
+                    <option value="#" disabled selected>Chest pain type</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </select>
+            </div>
+            <div class="row">
+                <input name="BP" type="number" min="0" placeholder="BP" autocomplete="off" class="property">
+                <input name="cholesterol" type="number" min="1" placeholder="Cholesterol" autocomplete="off" class="property">
+                <select name="FBS_over_120" id="FBS_over_120" class="property">
+                    <option value="#" disabled selected>FBS over 120</option>
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                </select>
+            </div>
+            <div class="row">
+                <select name="EKG_Result" id="EKG_Result" class="property">
+                    <option value="#" disabled selected>EKG Result</option>
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                </select>
+                <input name="max_HR" autocomplete="off" placeholder="Max HR" type="number" min="1" class="property">
+                <select name="exercise_angina" id="exercise_angina" class="property">
+                    <option value="#" disabled selected>Exercise angina</option>
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                </select>
+            </div>
+            <div class="row">
+                <input name="ST_depression" placeholder="ST depression"  autocomplete="off" type="text" class="property">
+                <input name="slope_of_ST" placeholder="slope of ST"  autocomplete="off" type="number" min="0" class="property">
+                <input name="number_of_vessels_fluoro" placeholder="Number of vessels" autocomplete="off" min="0" max="3" type="number" class="property">
+            </div>
+            <div class="row last">
+                <input name="thallium" placeholder="Thallium"  autocomplete="off" type="number" min="0" class="last_property">
+            </div>
+            <button id="button" type="submit">Check</button>
+        </form>
+    </div>
+{% endblock %}
